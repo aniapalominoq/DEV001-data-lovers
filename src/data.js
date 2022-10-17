@@ -1,9 +1,9 @@
 // estas funciones son de ejemplo
-
 export const example = () => {
-  return 'example';
+  return "hola";
 };
 
 export const anotherExample = () => {
-  return 'OMG';
+  return "OMG";
 };
+function filterData(date) {}
