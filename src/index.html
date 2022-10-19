@@ -3,145 +3,367 @@
   <head>
     <meta charset="utf-8" />
     <title>Data Lovers</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!---------------***************header*****************----------------->
     <header class="titulares header">
       <a href="#"
         ><img class="logo" src="images/logo.png" alt="logo pokemon"
       /></a>
       <nav class="menu">
-        <a href="#home">
-          <img src="images/casa.svg" alt="home"  width="30px" height="30px">
+        <a href="#">
+          <img src="images/casa.svg" alt="home" width="30px" height="30px" />
           <span>Home</span>
         </a>
         <a href="#pokedex">
-          <img src="images/Vector.svg" alt=""  width="30px" height="30px">
+          <img src="images/Vector.svg" alt="" width="30px" height="30px" />
           <span>Pokédex</span>
         </a>
-        
       </nav>
     </header>
-
+    <!---------------***************header*****************----------------->
+    <!---------------***************main*****************----------------->
     <main>
-      <article id="home" class="contenedor principal">
-        <section class="home">
+      <!---------------***************home*****************----------------->
+      <section id="home" class="home">
+        <section class="home-items">
           <img
             src="images/ASH.png"
             alt="Ash, con su pokebola en la mano te enviata a formar parte de los entrenadores"
           />
         </section>
-        <section class="home">
-        <h2>
-         BIENVENIDO A FORMAR PARTE
-          COMO ENTRENADOR POKEMON
-        </h2>
-           
+        <section class="home-items">
+          <h1 class="home-items-children">
+            BIENVENIDO A FORMAR PARTE COMO ENTRENADOR POKEMON
+          </h1>
+          <!--
+          <div class="home-items-children">
+            <img
+              src="images/poke_abierto.png"
+              alt="pokebola esta abierto"
+              width="80px"
+              height="80px"
+            />
+            <img
+              src="images/poke_cerrada.png"
+              alt="pokebola esta cerrado"
+              width="80px"
+              height="80px"
+            />
+            
+          </div>-->
         </section>
-      </article>
+      </section>
 
-      <article class="contenedor separacion">
-        <h2>Entrenador nuevo</h2>
-         <div class="informacion">
-          <img src="images/grupo.webp" alt="pokemon">
-         </div>
-      </article>
+      <section class="separacion">
+        <h2 class="separacion-items">Entrenador nuevo</h2>
+        <div class="separacion-items">
+          <img src="images/grupo.webp" alt="pokemon" />
+        </div>
+      </section>
 
+      <section id="pokedex" class="pokedex">
+        <!---------------***************filtros*****************----------------->
+        <nav class="pokedex-items filtro"></nav>
 
-      <article id="pokedex" class="contenedor segundario">
-       <!---------------------------------------------------------------------->
-        <article class="card pokemon">
-          <a href="#">
-            <img src="images/85 1.png" alt="Caterpie" />
-          </a>
+        <!---------------***************filtros*****************----------------->
 
-          <p id="numero-pokemon">
-            <span>N°:</span>
-          </p>
-          <h3>Caterpie</h3>
-          <div class="detalle-pokemon">
-            <img src="images/Bug.png" alt="tipo bicho" width="25px" height="25px">
-            <span>Veneno</span>
-          </div>
-        </article>
-       <!---------------------------------------------------------------------->
-       <article class="card pokemon">
-          <a href="#">
-            <img src="images/85 1.png" alt="Caterpie" />
-          </a>
+        <section class="pokedex-items carrusel">
+          <section class="pokedex-items-children">
+            <button id="izquierda"><</button>
+          </section>
 
-          <p id="numero-pokemon">
-            <span>N°:</span>
-          </p>
-          <h3>Caterpie</h3>
-          <div class="detalle-pokemon">
-            <span>Veneno</span>
-          </div>
-        </article>
-       <!---------------------------------------------------------------------->
-       <article class="card pokemon">
-          <a href="#">
-            <img src="images/85 1.png" alt="Caterpie" />
-          </a>
+          <section id="grande" class="pokedex-items-children grande">
+            <p id="auxilio0"></p>
+            <!--
+            <figure class="card pokemon">
+              <a href="#"><img id="imagen" src="" alt="la foto de" /></a>
+              <figcaption>
+                <span id="numero_pokemon"><b>N° :1 </b></span>
+                <h3></h3>
+                <div class="detalle-pokemon">
+                  <figure>
+                    <img
+                      id="img_tipo1"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo1"></span>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      id="img_tipo2"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo2"></span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </figcaption>
+            </figure>
 
-          <p id="numero-pokemon">
-            <span>N°:</span>
-          </p>
-          <h3>Caterpie</h3>
-          <div class="detalle-pokemon">
-            <span>Veneno</span>
-          </div>
-        </article>
-       <!---------------------------------------------------------------------->
-       <article class="card pokemon">
-          <a href="#">
-            <img src="images/85 1.png" alt="Caterpie" />
-          </a>
+            <figure class="card pokemon">
+              <a href="#"><img id="imagen" src="" alt="la foto de" /></a>
+              <figcaption>
+                <span id="numero_pokemon"><b>N° :2 </b></span>
+                <h3></h3>
+                <div class="detalle-pokemon">
+                  <figure>
+                    <img
+                      id="img_tipo1"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo1"></span>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      id="img_tipo2"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo2"></span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </figcaption>
+            </figure>
 
-          <p id="numero-pokemon">
-            <span>N°:</span>
-          </p>
-          <h3>Caterpie</h3>
-          <div class="detalle-pokemon">
-            <span>Veneno</span>
-          </div>
-        </article>
-       <!---------------------------------------------------------------------->
-       <article class="card pokemon">
-          <a href="#">
-            <img src="images/85 1.png" alt="Caterpie" />
-          </a>
+            <figure class="card pokemon">
+              <a href="#"><img id="imagen" src="" alt="la foto de" /></a>
+              <figcaption>
+                <span id="numero_pokemon"><b>N° :3 </b></span>
+                <h3></h3>
+                <div class="detalle-pokemon">
+                  <figure>
+                    <img
+                      id="img_tipo1"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo1"></span>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      id="img_tipo2"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo2"></span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </figcaption>
+            </figure>
 
-          <p id="numero-pokemon">
-            <span>N°:</span>
-          </p>
-          <h3>Caterpie</h3>
-          <div class="detalle-pokemon">
-            <span>Veneno</span>
-          </div>
-        </article>
-       <!---------------------------------------------------------------------->
-       <article class="card pokemon">
-          <a href="#">
-            <img src="images/85 1.png" alt="Caterpie" />
-          </a>
+            <figure class="card pokemon">
+              <a href="#"><img id="imagen" src="" alt="la foto de" /></a>
+              <figcaption>
+                <span id="numero_pokemon"><b>N° : 4</b></span>
+                <h3></h3>
+                <div class="detalle-pokemon">
+                  <figure>
+                    <img
+                      id="img_tipo1"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo1"></span>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      id="img_tipo2"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo2"></span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </figcaption>
+            </figure>
 
-          <p id="numero-pokemon">
-            <span>N°:</span>
-          </p>
-          <h3>Caterpie</h3>
-          <div class="detalle-pokemon">
-            <span>Veneno</span>
-          </div>
-        </article>
-       <!---------------------------------------------------------------------->
+            <figure class="card pokemon">
+              <a href="#"><img id="imagen" src="" alt="la foto de" /></a>
+              <figcaption>
+                <span id="numero_pokemon"><b>N° : 5</b></span>
+                <h3></h3>
+                <div class="detalle-pokemon">
+                  <figure>
+                    <img
+                      id="img_tipo1"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo1"></span>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      id="img_tipo2"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo2"></span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </figcaption>
+            </figure>
 
-        </article>
-      </article>
+            <figure class="card pokemon">
+              <a href="#"><img id="imagen" src="" alt="la foto de" /></a>
+              <figcaption>
+                <span id="numero_pokemon"><b>N° :6 </b></span>
+                <h3></h3>
+                <div class="detalle-pokemon">
+                  <figure>
+                    <img
+                      id="img_tipo1"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo1"></span>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      id="img_tipo2"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo2"></span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="card pokemon">
+              <a href="#"><img id="imagen" src="" alt="la foto de" /></a>
+              <figcaption>
+                <span id="numero_pokemon"><b>N° : 7</b></span>
+                <h3></h3>
+                <div class="detalle-pokemon">
+                  <figure>
+                    <img
+                      id="img_tipo1"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo1"></span>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      id="img_tipo2"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo2"></span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="card pokemon">
+              <a href="#"><img id="imagen" src="" alt="la foto de" /></a>
+              <figcaption>
+                <span id="numero_pokemon"><b>N° : 8</b></span>
+                <h3></h3>
+                <div class="detalle-pokemon">
+                  <figure>
+                    <img
+                      id="img_tipo1"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo1"></span>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      id="img_tipo2"
+                      src=""
+                      alt=""
+                      width="25px"
+                      height="25px"
+                    />
+                    <figcaption>
+                      <span id="tipo2"></span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </figcaption>
+            </figure>
+          --></section>
+          <section class="pokedex-items-children">
+            <button id="derecha">></button>
+          </section>
+        </section>
+      </section>
+
+      <!---------------***************pokedex*****************----------------->
     </main>
+    <!---------------***************main*****************----------------->
 
     <footer class="titulares">
       <small>Copyright © 2022 🇵🇪 | Melania palomino-Angie Marquina </small>

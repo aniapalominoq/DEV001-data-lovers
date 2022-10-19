@@ -86,11 +86,6 @@ a {
   margin-right: 0.5rem;
 }
 
-.home img {
-  max-width: 100%;
-  height: auto;
-}
-
 @media screen and (min-width: 1024px) {
   .header {
     position: sticky;
@@ -105,13 +100,110 @@ a {
   }
 }
 
-.contenedor {
+.home {
   display: flex;
+  color: var(--letras-color);
+  flex-direction: row;
+  justify-content: center;
+}
+.home-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70vh;
+}
+
+.separacion {
+  background-color: #071f46;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2398E493'/%3E%3Cstop offset='1' stop-color='%23071F46'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%2382FFCD' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%2382FFCD' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.5'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--letras-color);
+  justify-content: space-evenly;
+}
+.pokedex {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  justify-content: space-evenly;
+}
+.filtro {
+  background-color: rgb(107, 140, 188, 0.21);
+  width: 90%;
+  height: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.4rem;
+}
+
+.carrusel {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 92%;
+  height: auto;
+}
+
+.grande {
+  background-color: var(--titulares-bg-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   flex-wrap: wrap;
+  flex-grow: 1;
+  width: 65%;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  background-color: var(--card-color);
   color: var(--letras-color);
+  width: 250px;
+  height: 280px;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.detalle-pokemon {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.detalle-pokemon figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+  background-color: var(--color-pokemon-type);
+  padding: 0.15rem 0.5rem;
+  font-size: 1rem;
+  margin: 0.3rem;
+}
+
+h1 {
+  font-size: 4vh;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+h3 {
+  font-size: 2.2rem;
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 footer {
@@ -125,39 +217,11 @@ footer {
   width: 160px;
   height: 65px;
 }
-
-.card {
-  margin-top: 3rem;
-  margin-left: 2rem;
-  background-color: var(--card-color);
-
-  width: 250px;
-  height: 280px;
-  border-radius: 1.2rem;
-  font-size: 2vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.detalle-pokemon {
-  background-color: var(--color-pokemon-type);
-  border-radius: 0.4rem;
-  width: 150px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.separacion {
-  background-color: #071f46;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2398E493'/%3E%3Cstop offset='1' stop-color='%23071F46'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%2382FFCD' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%2382FFCD' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.5'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
-  background-attachment: fixed;
-  background-size: cover;
-}
-h2 {
-  font-size: 3.5vh;
-  text-shadow: black 0.1em 0.1em 0.2em;
+button {
+  color: #93dd8e;
+  font-weight: bold;
+  font-size: 6rem;
+  border-color: transparent;
+  background: transparent;
+  cursor: pointer;
 }
