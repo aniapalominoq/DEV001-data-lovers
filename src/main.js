@@ -5,10 +5,17 @@ import { showList } from "./data.js";
 
 const alldate = dbpokemon.pokemon;
 
-//varible del dom
+//funcion para activar el menu
+((d) => {
+  const $btnMenu = d.querySelector(".menu-btn"),
+    $menu = d.querySelector(".menu");
 
-//llamar ala funcion para mostrar
-
+  $btnMenu.addEventListener("click", () => {
+    $btnMenu.firstElementChild.classList.toggle("none");
+    $btnMenu.lastElementChild.classList.toggle("none");
+    $menu.classList.toggle("is-active");
+  });
+})(document);
 (function () {
   const array = showList(alldate);
 

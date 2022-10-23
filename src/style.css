@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,700&family=Rubik:wght@500&display=swap");
+
 :root {
   --titulares-bg-color: #071f46;
   --letras-color: #fff;
@@ -5,7 +7,29 @@
   --verde-claro: #93dd8e;
   --card-color: rgb(107, 140, 188, 0.21);
   --color-pokemon-type: rgb(115, 225, 181, 0.71);
-  --font: "Raleway", sans-serif;
+  --font: "Rubik", sans-serif;
+  --color-tipo-normal: #66625c;
+  --color-tipo-fighting: #c03028;
+  --color-tipo-flying: #9096f0;
+  --color-tipo-poison: #a040a0;
+  --color-tipo-ground: #e0b668;
+  --color-tipo-rock: #b8a038;
+  --color-tipo-bug: #9cb820;
+  --color-tipo-ghost: #705898;
+  --color-tipo-steel: #6d8f9c;
+  --color-tipo-fire: #f08030;
+  --color-tipo-water: #6890f0;
+  --color-tipo-grass: #22c02a;
+  --color-tipo-electric: #c09643;
+  --color-tipo-psychic: #eb2d77;
+  --color-tipo-ice: #98d8d8;
+  --color-tipo-dragon: #7038f8;
+  --color-tipo-dark: #504843;
+  --color-tipo-fairy: #f09ad9;
+  --color-tipo-unknown: #a39f99;
+  --color-tipo-shadow: #a39f99;
+  --color-amarillo: #fcf208;
+  --color-btn: #3daae7;
 }
 
 *,
@@ -21,13 +45,76 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   overflow-x: hidden; /* para cuando se haga mas pequeño no tenga scrolle en eleje x)*/
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /*tamaño minimo dela pantalla 100% del contenedor*/
 }
+.titulares {
+  background-color: var(--titulares-bg-color);
+  height: 5rem;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+/**********menu*************/
+.logo {
+  height: 2.5rem;
+  width: 6.5rem;
+}
+.menu-btn {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--titulares-bg-color);
+}
+.menu-btn svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.none {
+  display: none;
+}
+.menu {
+  width: 100%;
+  background-color: var(--titulares-bg-color);
+  position: fixed;
+  right: 0;
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+.menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu a {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+.menu a:hover {
+  background-color: var(--color-btn);
+  color: var(--titulares-bg-color);
+}
+
+/*
 main {
   flex-grow: 1;
 
@@ -225,3 +312,4 @@ button {
   background: transparent;
   cursor: pointer;
 }
+*/
