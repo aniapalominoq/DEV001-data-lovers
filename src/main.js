@@ -16,9 +16,9 @@ const alldate = dbpokemon.pokemon;
     $menu.classList.toggle("is-active");
   });
 })(document);
+
 (function () {
   const array = showList(alldate);
-
   array.forEach((elemt, index) => {
     let number = index;
     document.getElementById(

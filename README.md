@@ -1,6 +1,32 @@
-# Data Lovers
+# <img src="poke.png" alt="pokebol" height="40px" width="40px" /> Data Lovers Project - Pokémon <img src="poke.png" alt="pokebol" height="40px" width="40px" />
 
-## Índice
+## Definition of the project
+
+A website that shows the data of the pokemon in the form of a card, as well as specific information such as name, number, type, weight, height, weaknesses and their attack levels
+
+## Targets and User Experience
+
+We defined three main goals for the layout and UX features throughout the page:
+
+- **Beginner trainer**, who wants to know about name, number and type of pokemons to get familiar with all pokemons.
+- **Intermediate trainer**, interested in filtering tools to sort pokemon by types, weaknesses and consider that information for your best pokemon during a battle.
+- **master trainer**, requesting a filter tool that can sort pokemon by the level of their attacks, giving you information to choose a character with better possibilities for an aggressive initial battle.
+
+---
+
+## Prototype
+
+---
+
+## Final Version
+
+<a href="#" target="_blank">Link to deployment on GitHub Pages</a>
+
+### Melania palomino
+
+[<img src="https://img.shields.io/github/followers/meli2?label=follow&style=social" height="22" title="Follow me" />](https://github.com/meli2)
+
+---
 
 ## Aprendizajes
 

@@ -16,3 +16,22 @@ export function showList(alldate) {
   });
   return arrayListVistaPokemon;
 }
+
+export function filterList(alldate, name, num, type) {
+  const arrayListCaracter = [];
+  alldate.filter((element) => {
+    if (name) {
+      arrayListCaracter.push[element.name];
+    } else if (num) {
+      arrayListCaracter.push(element.num);
+    } else if (type) {
+      arrayListCaracter.push[
+        {
+          tipy1: element.type[0],
+          type2: element.type[1],
+        }
+      ];
+    }
+  });
+  return arrayListCaracter;
+}
