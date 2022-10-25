@@ -2,7 +2,7 @@
 
 :root {
   --titulares-bg-color: #071f46;
-  --letras-color: #fff;
+  --letras-color: #fdfdfd;
   --verde-oscuro: #73e1b5;
   --verde-claro: #93dd8e;
   --card-color: rgb(107, 140, 188, 0.21);
@@ -28,8 +28,8 @@
   --color-tipo-fairy: #f09ad9;
   --color-tipo-unknown: #a39f99;
   --color-tipo-shadow: #a39f99;
-  --color-amarillo: #fcf208;
-  --color-btn: #3daae7;
+  --color-amarillo: #ffd92d;
+  --color-btn: #2c6bb3;
 }
 
 *,
@@ -54,7 +54,7 @@ body {
 }
 .titulares {
   background-color: var(--titulares-bg-color);
-  height: 5rem;
+  height: 6rem;
 }
 
 .header {
@@ -65,11 +65,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  z-index: 999;
 }
 /**********menu*************/
 .logo {
-  height: 2.5rem;
-  width: 6.5rem;
+  height: 4rem;
+  width: 12rem;
+  max-width: 100%;
+  height: auto;
 }
 .menu-btn {
   outline: none;
@@ -78,18 +81,24 @@ body {
   background-color: var(--titulares-bg-color);
 }
 .menu-btn svg {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+  max-width: 100%;
+  height: auto;
 }
+
 .none {
   display: none;
+}
+.icon {
+  visibility: hidden;
 }
 .menu {
   width: 100%;
   background-color: var(--titulares-bg-color);
   position: fixed;
   right: 0;
-  top: 5rem;
+  top: 6rem;
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -102,19 +111,17 @@ body {
 }
 
 .menu a {
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 1.2rem;
-  font-weight: 200;
-  text-align: center;
+  text-align: right;
   text-decoration: none;
-  color: #fff;
+  color: #fdfdfd;
 }
 .menu a:hover {
-  background-color: var(--color-btn);
-  color: var(--titulares-bg-color);
+  background-color: #ffd92d;
+  color: #2c6bb3;
 }
 
-/*
 main {
   flex-grow: 1;
 
@@ -123,81 +130,59 @@ main {
   background-attachment: fixed;
   background-size: cover;
 }
-.titulares {
-  background-color: var(--titulares-bg-color);
-  height: 5rem;
-}
-.header {
-  position: fixed;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.menu {
-  display: flex;
-  margin-left: 0;
-}
-.menu > * {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.logo {
-  height: 51.2px;
-  width: 80px;
-  margin-left: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: var(--letras-color);
-  font-size: 1rem;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  margin: 0.8rem;
-}
-.menu a:hover {
-  border: 0.2rem solid var(--verde-oscuro);
-  border-radius: 2rem;
-
-  margin: 0.5rem;
-}
-
-.menu img {
-  margin-right: 0.5rem;
-}
-
-@media screen and (min-width: 1024px) {
-  .header {
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .menu {
-    display: flex;
-    padding: 2rem;
-  }
-}
-
 .home {
+  margin-top: 6rem;
   display: flex;
-  color: var(--letras-color);
-  flex-direction: row;
+  flex-direction: column-reverse;
+  align-items: center;
   justify-content: center;
 }
-.home-items {
+.welcome h1 {
+  color: #fdfdfd;
+  text-align: center;
+  font-family: "ralewey";
+  font-size: 8vh;
+  height: auto;
+}
+.welcome h2 {
+  color: #fdfdfd;
+  text-align: center;
+  font-size: 2.8vh;
+
+  font-family: "ralewey";
+}
+
+.separacion h2 {
+  color: var(--color-btn);
+  text-align: center;
+  font-size: 4vh;
+  text-shadow: rgba(39, 39, 39, 0.74) 0.1em 0.1em 0.2em;
+}
+
+.home img {
+  width: 13rem;
+  height: 40rem;
+  max-width: 100%;
+  height: auto;
+}
+.welcome {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 70vh;
+  align-items: center;
+}
+.welcome a {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  padding: 0.8rem 4rem;
+  border-radius: 0.5rem;
+  background-color: #2c6bb3;
+  color: #ffd92d;
+  box-shadow: 0.25rem 0.25rem 1rem rgb(0, 0, 0, 0.25);
+}
+.welcome a:hover {
+  background-color: #ffd92d;
+  color: #2c6bb3;
 }
 
 .separacion {
@@ -206,53 +191,121 @@ a {
   background-attachment: fixed;
   background-size: cover;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  color: var(--letras-color);
-  justify-content: space-evenly;
+  padding: 2rem;
+}
+.separacion:nth-child(2) img {
+  width: 40rem;
+  height: 100rem;
+  max-width: 100%;
+  height: auto;
 }
 .pokedex {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.25rem;
 }
-.filtro {
-  background-color: rgb(107, 140, 188, 0.21);
+/***********nav para los filtros*********/
+.nav-filtro {
+  background-color: var(--titulares-bg-color);
   width: 90%;
-  height: 4rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  height: 15rem;
   border-radius: 0.4rem;
-}
-
-.carrusel {
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-direction: column;
   justify-content: center;
-  width: 92%;
-  height: auto;
+  align-items: center;
+  gap: 1rem;
+}
+.icon-search {
+  background-color: var(--card-color);
+  padding: 0.8rem 4rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 60%;
+  border: transparent;
+  font-family: "raleway";
+  font-size: 1rem;
+  color: var(--letras-color);
+  font-weight: bold;
+}
+.icon-search::placeholder {
+  background-image: url(images/search1.png);
+  background-size: 1.2rem 1.2rem;
+  background-repeat: no-repeat;
+  background-position: 1.5rem center;
+  font-family: "raleway";
+  font-size: 1rem;
+  color: #fdfdfd2c;
 }
 
-.grande {
+.icon-search:focus {
+  outline: none;
+  /* outline: 0.13rem solid var(--color-amarillo);*/
+}
+.label-input {
+  color: var(--letras-color);
+  font-family: "raleway";
+  font-size: 1rem;
+}
+/*************formato para la selecion**************/
+
+.selection {
+  padding: 0.8rem 4rem;
+  background: var(--card-color);
+  border: transparent;
+  width: 60%;
+  text-align: center;
+  box-shadow: 0.25rem 0.25rem 1rem rgb(0, 0, 0, 0.25);
+
+  /*****************/
+
+  cursor: pointer;
+  color: var(--color-amarillo);
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.selection:hover {
+  color: var(--color-btn);
+  font-weight: bold;
+  background: linear-gradient(to left, var(--verde-oscuro), var(--verde-claro));
+}
+
+.label-selection {
+  color: var(--letras-color);
+  font-family: "raleway";
+  font-size: 1rem;
+}
+/***************************************************/
+.carrusel {
+  padding: 1rem 1rem 1rem 1rem;
   background-color: var(--titulares-bg-color);
   display: flex;
-  flex-direction: row;
   align-items: center;
+  flex-direction: row;
   flex-wrap: wrap;
-  flex-grow: 1;
-  width: 65%;
-  margin-bottom: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding-bottom: 2rem;
+  justify-content: center;
+  width: 90%;
+  gap: 1rem;
+}
+.total-filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.total-filters p {
+  color: var(--letras-color);
+  font-family: "raleway";
+  font-size: 1rem;
 }
 
 .card {
-  margin-top: 2rem;
-  margin-left: 2rem;
   background-color: var(--card-color);
   color: var(--letras-color);
   width: 250px;
@@ -262,34 +315,54 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
 }
+
 .card figcaption {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 }
 .detalle-pokemon {
   display: flex;
   flex-flow: row nowrap;
+  gap: 0.5rem;
+  text-transform: uppercase;
 }
-.detalle-pokemon figure {
+#punto {
+  background-color: #a39f99;
+  color: #a39f99;
+  border-radius: 20rem;
+  font-size: 0.9rem;
+}
+#tipo2 {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.4rem;
-  background-color: var(--color-pokemon-type);
-  padding: 0.15rem 0.5rem;
-  font-size: 1rem;
-  margin: 0.3rem;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.img-pokemon {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.imagen {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+.numero_pokemon {
+  font-size: 4.5rem;
+  text-align: center;
+  color: #fdfdfd2c;
+  padding-bottom: 2rem;
 }
 
-h1 {
-  font-size: 4vh;
-  text-shadow: black 0.1em 0.1em 0.2em;
-}
 h3 {
+  text-transform: capitalize;
   font-size: 2.2rem;
+  font-weight: 100;
   text-shadow: black 0.1em 0.1em 0.2em;
 }
 
@@ -297,19 +370,104 @@ footer {
   background: linear-gradient(to left, var(--verde-oscuro), var(--verde-claro));
   display: flex;
   align-items: center;
-
   justify-content: space-between;
 }
 .imagen-footer {
   width: 160px;
   height: 65px;
 }
-button {
-  color: #93dd8e;
-  font-weight: bold;
-  font-size: 6rem;
-  border-color: transparent;
-  background: transparent;
-  cursor: pointer;
+
+@media screen and (min-width: 870px) {
+  .menu-btn {
+    display: none;
+  }
+  .menu {
+    position: static;
+    width: auto;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+    margin-left: 0;
+  }
+  .menu a:hover {
+    background-color: transparent;
+    color: var(--letras-color);
+    border-radius: 2rem;
+    margin-left: 1rem;
+    border: 0.2rem solid var(--verde-oscuro);
+    border-radius: 2rem;
+
+    margin: 0.5rem;
+  }
+  .menu > * {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .menu a {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin: 0.8rem;
+  }
+  .home {
+    flex-direction: row;
+  }
+
+  .home img {
+    width: 32rem;
+  }
+  .welcome h1 {
+    font-size: 13vh;
+  }
+  .welcome h2 {
+    font-size: 5.5vh;
+  }
+
+  .welcome a {
+    padding: 0.5rem 5rem;
+  }
+
+  .separacion {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .icon {
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0.4rem;
+  }
+
+  .welcome h1 {
+    font-size: 15vh;
+  }
+  .welcome h2 {
+    font-size: 3vh;
+  }
+
+  .nav-filtro {
+    flex-direction: row;
+    height: 6rem;
+    gap: 1.5rem;
+  }
+
+  .selection {
+    padding: 0.8rem 4rem;
+    width: 25%;
+    font-size: 1.2rem;
+  }
+
+  .icon-search {
+    width: 25%;
+    font-size: 1.1rem;
+  }
+
+  .icon-search::placeholder {
+    font-size: 1.1rem;
+    background-size: 1.5rem 1.5rem;
+  }
 }
-*/

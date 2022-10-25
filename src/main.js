@@ -23,20 +23,26 @@ const alldate = dbpokemon.pokemon;
     let number = index;
     document.getElementById(
       `auxilio${number}`
-    ).outerHTML = `<figure class="card pokemon"><a href="#"><img id="imagen" src="${
-      elemt.foto
-    }" alt="la foto de ${
+    ).outerHTML = `<figure class="card pokemon">
+            <div class="img-pokemon">
+              <span id="numero_pokemon" class="numero_pokemon">#${
+                elemt.num
+              }</span>
+              <a href="#" class="imagen">
+                <img id="imagen" src="${elemt.foto}" alt="la foto de ${
       elemt.name
-    }" /></a><figcaption><span id="numero_pokemon"><b>N° : ${
-      elemt.num
-    }</b></span><h3>${
-      elemt.name
-    }</h3><div class="detalle-pokemon"><figure><img id="img_tipo1"src=""alt=""width="25px"height="25px"/><figcaption><span id="tipo1">${
-      elemt.type1
-    }</span></figcaption></figure><figure><img id="img_tipo2"src=""alt=""width="25px"height="25px"/><figcaption><span id="tipo2">${
-      elemt.type2
-    }</span></figcaption></figure></div></figcaption></figure><p id="auxilio${
-      index + 1
-    }"></p>`;
+    }" />
+              </a>
+            </div>
+            <figcaption>
+              <h3>${elemt.name}</h3>
+              <div class="detalle-pokemon">
+                <span id="tipo1">${elemt.type1}</span>
+                <span id="tipo2"><span id="punto">*</span><span>${
+                  elemt.type2
+                }</span></span>
+              </div>
+            </figcaption>
+          </figure><p id="auxilio${index + 1}"></p>`;
   });
 })();
