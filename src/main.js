@@ -100,6 +100,7 @@ alldata.forEach((e) => {
   const array = showList(alldata);
   array.forEach((e, index) => {
     let number = index;
+
     document.getElementById(
       `auxilio${number}`
     ).outerHTML = `<section class="yo">

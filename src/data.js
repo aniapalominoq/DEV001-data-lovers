@@ -126,6 +126,16 @@ export function computeStatus(data) {
   maxStaminases = Math.max(...arrayStaminases);
   maxCp = Math.max(...arrayCp);
   maxHp = Math.max(...arrayHp);
-  computeStatus.push(maxAttacks, maxDefenses, maxStaminases, maxCp, maxHp);
-  return computeStatus, arrayStatus;
+
+  arrayStatus.map((el) => {
+    computeStatus.push({
+      attack: `${Math.trunc((el.attack / maxAttacks) * 100)}%`,
+      defense: `${Math.trunc((el.defense / maxDefenses) * 100)}%`,
+      stamina: `${Math.trunc((el.stamina / maxStaminases) * 100)}%`,
+      cp: `${Math.trunc((el.cp / maxCp) * 100)}%`,
+      hp: `${Math.trunc((el.hp / maxHp) * 100)}%`,
+    });
+  });
+
+  return computeStatus;
 }

@@ -1,4 +1,4 @@
-import { showList, filterList } from "../src/data.js";
+import { showList, filterList, computeStatus } from "../src/data.js";
 
 //test la funcion que muestra la lista
 describe("showList test", () => {
@@ -319,6 +319,89 @@ describe("filterList test", () => {
         name: "slowbro",
         type1: "water",
         type2: "psychic",
+      },
+    ]);
+  });
+});
+
+//validar la funcion computeStatus
+describe("computeStatus  test", () => {
+  it("is a function", () => {
+    expect(typeof computeStatus).toBe("function");
+  });
+
+  it("attack level statistics with respect to the total of pokemons", () => {
+    const data = [
+      {
+        stats: {
+          "base-attack": "118",
+          "base-defense": "111",
+          "base-stamina": "128",
+          "max-cp": "1115",
+          "max-hp": "113",
+        },
+      },
+      {
+        stats: {
+          "base-attack": "198",
+          "base-defense": "189",
+          "base-stamina": "190",
+          "max-cp": "2720",
+          "max-hp": "162",
+        },
+      },
+
+      {
+        stats: {
+          "base-attack": "94",
+          "base-defense": "121",
+          "base-stamina": "127",
+          "max-cp": "946",
+          "max-hp": "112",
+        },
+      },
+      {
+        stats: {
+          "base-attack": "60",
+          "base-defense": "106",
+          "base-stamina": "382",
+          "max-cp": "1026",
+          "max-hp": "313",
+        },
+      },
+    ];
+    expect(computeStatus(data)).toStrictEqual([
+      {
+        //198,189,382,2720,313
+        attack: "59%",
+        defense: "58%",
+        stamina: "33%",
+        cp: "40%",
+        hp: "36%",
+      },
+      {
+        //198,189,382,2720,313
+        attack: "100%",
+        defense: "100%",
+        stamina: "49%",
+        cp: "100%",
+        hp: "51%",
+      },
+      {
+        //198,189,382,2720,313
+        attack: "47%",
+        defense: "64%",
+        stamina: "33%",
+        cp: "34%",
+        hp: "35%",
+      },
+      {
+        //198,189,382,2720,313
+        attack: "30%",
+        defense: "56%",
+        stamina: "100%",
+        cp: "37%",
+        hp: "100%",
       },
     ]);
   });
