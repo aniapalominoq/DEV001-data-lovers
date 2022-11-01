@@ -1,87 +1,6 @@
 import dbpokemon from "./data/pokemon/pokemon.js";
 import { showList, computeStatus } from "./data.js";
 
-//pruebas
-/*************************************/
-const alldata = dbpokemon.pokemon;
-
-console.log(computeStatus(alldata));
-
-console.log(showList(alldata));
-
-alldata.forEach((e) => {
-  const {
-    num,
-    name,
-    img,
-    size: { height, weight },
-    type: [type1, type2 = " "],
-    resistant: [
-      valueOne,
-      valueTwo = " ",
-      valueThree = " ",
-      valueFour = " ",
-      valueFive = " ",
-      valueSix = " ",
-      valueSeven = " ",
-    ],
-    weaknesses: [
-      valueOn,
-      valueTw = " ",
-      valueThr = " ",
-      valueFo = " ",
-      valueFi = " ",
-      valueSi = " ",
-      valueSe = " ",
-    ],
-  } = e;
-
-  console.log(
-    num,
-    name,
-    img,
-    height,
-    weight,
-    type1,
-    type2,
-    valueOne,
-    valueTwo,
-    valueThree,
-    valueFour,
-    valueFive,
-    valueSix,
-    valueSeven,
-    valueOn,
-    valueTw,
-    valueThr,
-    valueFo,
-    valueFi,
-    valueSi,
-    valueSe
-  );
-});
-
-const { pokemon, valo, lucas, fido, ...trece } = dbpokemon;
-
-console.log(pokemon, valo, lucas, fido, trece);
-
-const [valor1, valor2, valor3, ...demas] = alldata;
-console.log(valor1, valor2, valor3, demas);
-
-console.log(Object.keys(valor1));
-console.log(Object.values(valor1));
-console.log(Object.keys(valor2));
-console.log(Object.values(valor2));
-
-alldata.forEach((e) => {
-  // console.log(e.weaknesses.length);
-  // console.log(e.weaknesses);
-
-  console.log(e.resistant.length);
-  console.log(e.resistant);
-});
-/*************************************/
-
 //funcion para activar el menu
 //funciones autoejecutables
 
@@ -96,9 +15,22 @@ alldata.forEach((e) => {
   });
 })(document);
 
+//usando las funiones showList y computeStatus para generar los card
+/*************************************/
+const alldata = dbpokemon.pokemon;
+const arra1 = showList(alldata);
+const arra2 = computeStatus(alldata);
+const arraytotal = [];
+let n = 0;
+do {
+  Object.assign(arra1[n], arra2[n]);
+  arraytotal.push(arra1[n]);
+  n++;
+} while (n < 251);
+/*************************************/
+
 (function () {
-  const array = showList(alldata);
-  array.forEach((e, index) => {
+  arraytotal.forEach((e, index) => {
     let number = index;
 
     document.getElementById(
@@ -122,7 +54,7 @@ alldata.forEach((e) => {
                   <div class="detalle-pokemon">
                     <span id="tipo1">${e.type1}</span>
                     <span id="tipo2"
-                      ><span id="punto">*</span><span>${e.type2}</span></span
+                      ><span id="punto">:</span><span>${e.type2}</span></span
                     >
                   </div>
                 </figcaption>
@@ -133,31 +65,41 @@ alldata.forEach((e) => {
                   <div class="item">
                     <h5>Attack</h5>
                     <div class="barra">
-                      <span class="graph-bar1">80%</span>
+                      <span class="graph-bar1" style:"width:${e.attack};" >${
+      e.attack
+    }</span>
                     </div>
                   </div>
                   <div class="item">
                     <h5>Defense</h5>
                     <div class="barra">
-                      <span class="graph-bar2">30%</span>
+                      <span class="graph-bar2" style="width:${e.defense};">${
+      e.defense
+    }</span>
                     </div>
                   </div>
                   <div class="item">
                     <h5>Stamina</h5>
                     <div class="barra">
-                      <span class="graph-bar3">80%</span>
+                      <span class="graph-bar3" style="width:${e.stamina};"  >${
+      e.stamina
+    }</span>
                     </div>
                   </div>
                   <div class="item">
                     <h5>CP</h5>
                     <div class="barra">
-                      <span class="graph-bar4">20%</span>
+                      <span class="graph-bar4" style="width:${e.cp};"  >${
+      e.cp
+    }</span>
                     </div>
                   </div>
                   <div class="item">
                     <h5>HP</h5>
                     <div class="barra">
-                      <span class="graph-bar5">10%</span>
+                      <span class="graph-bar5" style="width:${e.hp};" >${
+      e.hp
+    }</span>
                     </div>
                   </div>
                 </div>

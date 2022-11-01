@@ -12,21 +12,21 @@ export function showList(alldata) {
 
       resistant: [
         resistant1,
-        resistant2 = " ",
-        resistant3 = " ",
-        resistant4 = " ",
-        resistant5 = " ",
-        resistant6 = " ",
-        resistant7 = " ",
+        resistant2 = "",
+        resistant3 = "",
+        resistant4 = "",
+        resistant5 = "",
+        resistant6 = "",
+        resistant7 = "",
       ],
       weaknesses: [
         weaknesses1,
-        weaknesses2 = " ",
-        weaknesses3 = " ",
-        weaknesses4 = " ",
-        weaknesses5 = " ",
-        weaknesses6 = " ",
-        weaknesses7 = " ",
+        weaknesses2 = "",
+        weaknesses3 = "",
+        weaknesses4 = "",
+        weaknesses5 = "",
+        weaknesses6 = "",
+        weaknesses7 = "",
       ],
     } = element;
     arrayListVistaPokemon.push({
