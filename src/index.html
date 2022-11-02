@@ -202,18 +202,21 @@
 
       <section id="pokedex" class="pokedex">
         <nav id="filtro" class="pokedex-items nav-filtro">
-          <label for="poke-select" class="label-selection"
+          <label for="pokeselect" class="label-selection"
             >Choose a Pokemon:
           </label>
 
-          <select id="poke-select" class="selection">
+          <select id="pokeselect" class="selection">
+            <option selected="true" disabled="disabled">
+              Select an option
+            </option>
             <optgroup label="Names Alphabetically">
-              <option>A-Z</option>
-              <option>Z-A</option>
+              <option value="A-Z">A-Z</option>
+              <option value="Z-A">Z-A</option>
             </optgroup>
             <optgroup label="Number Pokemon">
-              <option>Bottom</option>
-              <option>Top</option>
+              <option value="Highest to lowest">Highest to lowest</option>
+              <option value="Least to greatest">Least to greatest</option>
             </optgroup>
           </select>
           <label for="poke-input" class="label-input">Name or Number: </label>
@@ -233,9 +236,7 @@
           />
           <p>Total filters (251)</p>
         </div>
-        <section class="pokedex-items carrusel">
-          <p id="auxilio0"></p>
-        </section>
+        <section id="carrusel" class="pokedex-items carrusel"></section>
       </section>
     </main>
 

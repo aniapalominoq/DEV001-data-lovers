@@ -1,5 +1,11 @@
 //funcion mostrar toda la data filtrada para el card
 
+/**
+ *
+ * @param {*} alldata
+ * @returns
+ */
+
 export function showList(alldata) {
   const arrayListVistaPokemon = [];
   alldata.forEach((element) => {
@@ -81,6 +87,8 @@ export function orderListPokemon(data, conditions) {
 
   return data;
 }
+
+export function filterPokemon(data, conditions) {}
 
 // funcion para  mostrar su nivel de su debilidades:
 export function computeStatus(data) {
