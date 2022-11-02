@@ -8,7 +8,7 @@ export function showList(alldata) {
       name,
       img,
       size: { height, weight },
-      type: [type1, type2 = " "],
+      type: [type1, type2 = ""],
 
       resistant: [
         resistant1,
@@ -57,34 +57,29 @@ export function showList(alldata) {
   return arrayListVistaPokemon;
 }
 
-// funcion  filtra por numero,nombre,type
+//funcion ordenar a-z z-a /mayor a menor# y viciversa
+export function orderListPokemon(data, conditions) {
+  if (conditions === "A-Z") {
+    data.sort((x, y) => x.name.localeCompare(y.name));
+  }
+  if (conditions === "Z-A") {
+    data.sort((x, y) => x.name.localeCompare(y.name));
+    data.reverse();
+  }
 
-export function filterList(date, condition) {
-  const arrayFilterList = [];
-  date.forEach((e) => {
-    if (condition === e.name || condition === e.num) {
-      if (typeof e.type[1] === "undefined") {
-        arrayFilterList.push({
-          img: e.img,
-          num: e.num,
-          name: e.name,
-          type1: e.type[0],
-          type2: " ",
-          //aqui puede ir otras datos
-        });
-      } else {
-        arrayFilterList.push({
-          img: e.img,
-          num: e.num,
-          name: e.name,
-          type1: e.type[0],
-          type2: e.type[1],
-          //aqui puede ir otras datos
-        });
-      }
-    }
-  });
-  return arrayFilterList;
+  if (conditions === "Highest to lowest") {
+    data.sort((x, y) => {
+      return x.num - y.num;
+    });
+  }
+  if (conditions === "Least to greatest") {
+    data.sort((x, y) => {
+      return x.num - y.num;
+    });
+    data.reverse();
+  }
+
+  return data;
 }
 
 // funcion para  mostrar su nivel de su debilidades:

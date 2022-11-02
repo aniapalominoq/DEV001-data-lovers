@@ -1,5 +1,5 @@
 import dbpokemon from "./data/pokemon/pokemon.js";
-import { showList, computeStatus } from "./data.js";
+import { showList, computeStatus, orderListPokemon } from "./data.js";
 
 //funcion para activar el menu
 //funciones autoejecutables
@@ -42,9 +42,9 @@ do {
       e.height
     }</span></div>
                 <div class="img-pokemon">
-                  <span id="numero_pokemon" class="numero_pokemon"
-                    >#${e.num}</span
-                  >
+                  <span id="numero_pokemon" class="numero_pokemon">
+                  #${e.num}
+                  </span>
                   <a href="#" class="imagen">
                     <img id="imagen" src="${e.img}" alt="Imagen de ${e.name}" />
                   </a>
@@ -53,53 +53,52 @@ do {
                   <h3>${e.name}</h3>
                   <div class="detalle-pokemon">
                     <span id="tipo1">${e.type1}</span>
-                    <span id="tipo2"
-                      ><span id="punto">:</span><span>${e.type2}</span></span
-                    >
+                    <span id="tipo2">
+                    <span id="punto">:</span>
+                    <span>${e.type2}</span>
+                    </span>
                   </div>
                 </figcaption>
               </figure>
-              <section class="card pokemon-back">
+              <section class="pokemon-back">
                 <h4>Stats</h4>
                 <div class="status-pokemon">
                   <div class="item">
                     <h5>Attack</h5>
                     <div class="barra">
-                      <span class="graph-bar1" style:"width:${e.attack};" >${
+                      <span class="graph-bar1" style:"width:${e.attack}">${
       e.attack
-    }</span>
+    }
+                      </span>
                     </div>
                   </div>
                   <div class="item">
                     <h5>Defense</h5>
                     <div class="barra">
-                      <span class="graph-bar2" style="width:${e.defense};">${
-      e.defense
-    }</span>
+                      <span class="graph-bar2" style="width:${e.defense}">
+                      ${e.defense}
+                      </span>
                     </div>
                   </div>
                   <div class="item">
                     <h5>Stamina</h5>
                     <div class="barra">
-                      <span class="graph-bar3" style="width:${e.stamina};"  >${
-      e.stamina
-    }</span>
+                      <span class="graph-bar3" style="width:${e.stamina}">
+                      ${e.stamina}</span>
                     </div>
                   </div>
                   <div class="item">
                     <h5>CP</h5>
                     <div class="barra">
-                      <span class="graph-bar4" style="width:${e.cp};"  >${
-      e.cp
-    }</span>
+                      <span class="graph-bar4" style="width:${e.cp}">${e.cp}
+                      </span>
                     </div>
                   </div>
                   <div class="item">
                     <h5>HP</h5>
                     <div class="barra">
-                      <span class="graph-bar5" style="width:${e.hp};" >${
-      e.hp
-    }</span>
+                      <span class="graph-bar5" style="width:${e.hp}">${e.hp}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -127,6 +126,7 @@ do {
                     <li>${e.weaknesses7}</li>
                   </ul>
                 </div>
+                <a href="detalles.html" class="btn-destalles">See more details... </a>
               </section>
             </article>
           </section><p id="auxilio${index + 1}"></p>`;

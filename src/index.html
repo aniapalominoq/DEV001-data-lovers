@@ -202,6 +202,20 @@
 
       <section id="pokedex" class="pokedex">
         <nav id="filtro" class="pokedex-items nav-filtro">
+          <label for="poke-select" class="label-selection"
+            >Choose a Pokemon:
+          </label>
+
+          <select id="poke-select" class="selection">
+            <optgroup label="Names Alphabetically">
+              <option>A-Z</option>
+              <option>Z-A</option>
+            </optgroup>
+            <optgroup label="Number Pokemon">
+              <option>Bottom</option>
+              <option>Top</option>
+            </optgroup>
+          </select>
           <label for="poke-input" class="label-input">Name or Number: </label>
           <input
             class="icon-search"
@@ -209,30 +223,6 @@
             type="search"
             placeholder="search by name"
           />
-
-          <label for="poke-select" class="label-selection"
-            >Choose a Pokemon:
-          </label>
-
-          <select id="poke-select" class="selection">
-            <optgroup label="Number">
-              <option>Bottom</option>
-              <option>Top</option>
-            </optgroup>
-            <optgroup label="Order">
-              <option>A-Z</option>
-              <option>Z-A</option>
-            </optgroup>
-            <optgroup label="Type">
-              <option>Normal</option>
-              <option>Water</option>
-              <option>Fire</option>
-            </optgroup>
-            <optgroup label="Generation Name">
-              <option>Kanto</option>
-              <option>johto</option>
-            </optgroup>
-          </select>
         </nav>
         <div class="total-filters">
           <img
@@ -244,99 +234,13 @@
           <p>Total filters (251)</p>
         </div>
         <section class="pokedex-items carrusel">
-          <!------tracera--------->
-          <!--
-          <section class="yo">
-            <article class="card-inner">
-              <figure class="card pokemon-front">
-                <div class="peso"><span>23kg</span><span>1.5m</span></div>
-                <div class="img-pokemon">
-                  <span id="numero_pokemon" class="numero_pokemon"
-                    >frontal</span
-                  >
-                  <a href="#" class="imagen">
-                    <img id="imagen" src="images/mon.png" alt="nombre" />
-                  </a>
-                </div>
-                <figcaption>
-                  <h3>nombre</h3>
-                  <div class="detalle-pokemon">
-                    <span id="tipo1">tipo 1</span>
-                    <span id="tipo2"
-                      ><span id="punto">*</span><span>tipo 2</span></span
-                    >
-                  </div>
-                </figcaption>
-              </figure>
-              <section class="card pokemon-back">
-                <h4>Stats</h4>
-                <div class="status-pokemon">
-                  <div class="item">
-                    <h5>Attack</h5>
-                    <div class="barra">
-                      <span class="graph-bar1">80%</span>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <h5>Defense</h5>
-                    <div class="barra">
-                      <span class="graph-bar2">30%</span>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <h5>Stamina</h5>
-                    <div class="barra">
-                      <span class="graph-bar3">80%</span>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <h5>CP</h5>
-                    <div class="barra">
-                      <span class="graph-bar4">20%</span>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <h5>HP</h5>
-                    <div class="barra">
-                      <span class="graph-bar5">10%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="resistant">
-                  <h4>Resistant</h4>
-                  <ul>
-                    <li>fighting</li>
-                    <li>fighting</li>
-                    <li>fighting</li>
-                    <li>fighting</li>
-                    <li>fighting</li>
-                    <li>fighting</li>
-                    <li>fighting</li>
-                  </ul>
-                </div>
-                <div class="weaknesses">
-                  <h4>Weaknesses</h4>
-                  <ul>
-                    <li>fighting</li>
-                    <li>fighting</li>
-                    <li>fighting</li>
-                    <li>fighting</li>
-                    <li>fighting</li>
-                    <li>fighting</li>
-                    <li>fighting</li>
-                  </ul>
-                </div>
-              </section>
-            </article>
-          </section>
-          ---->
           <p id="auxilio0"></p>
         </section>
       </section>
     </main>
 
-    <footer class="titulares">
-      <small>Copyright © 2022 🇵🇪 | Melania palomino-Angie Marquina </small>
+    <footer class="footer titulares">
+      <small>Copyright © 2022 🇵🇪 | Melania palomino </small>
       <img
         class="imagen-footer"
         src="images/Vector.png"
