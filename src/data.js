@@ -1,9 +1,28 @@
-//funcion mostrar toda la data filtrada para el card
-
 /**
- *
- * @param {*} alldata
- * @returns
+ * funcion mostrar toda la data filtrada para el card frontal
+ * @param {array}alldata es un arreglo de objetos de los251 pokkemones
+ * @returns {array}arrayListVistaPokemon es un arreglo de objetos con los siguientes datos(
+ *  num:numero de Pokémon
+      name:nombre del pokémon
+      img:imagen del pokémon
+      height:altura del pokémon(metros)
+      weight:peso dek pokémon(kg)
+      type1:su primer tipo
+      type2:su segundo tipo y si no la tuviera devuelve vacio
+      resistant1:su primer resistencia  y si no la tuviera devuelve vacio
+      resistant2:su segundo resistencia  y si no la tuviera devuelve vacio
+      resistant3:su tercero resistencia  y si no la tuviera devuelve vacio
+      resistant4:su cuarto resistencia  y si no la tuviera devuelve vacio
+      resistant5:su quinto resistencia  y si no la tuviera devuelve vacio
+      resistant6:su sexto resistencia  y si no la tuviera devuelve vacio
+      resistant7:su septimo resistencia  y si no la tuviera devuelve vacio
+      weaknesses1:su primer weaknesses 
+      weaknesses2:su segunda resistencia  y si no la tuviera devuelve vacio
+      weaknesses3:su tercera resistencia  y si no la tuviera devuelve vacio
+      weaknesses4:su cuarta resistencia  y si no la tuviera devuelve vacio
+      weaknesses5:su quinta resistencia  y si no la tuviera devuelve vacio
+      weaknesses6:su sexta resistencia  y si no la tuviera devuelve vacio
+      weaknesses7:su septima resistencia  y si no la tuviera devuelve vacio)
  */
 
 export function showList(alldata) {
@@ -63,7 +82,13 @@ export function showList(alldata) {
   return arrayListVistaPokemon;
 }
 
-//funcion ordenar a-z z-a /mayor a menor# y viciversa
+/**
+ * funcion ordenar a-z z-a /mayor a menor# y viciversa
+ * @param {array} data es un arreglo que bota la funcion Showlist mas computeStatus
+ * @param {string} conditions esto son los vaores de  las opciones del select
+ * @returns {array} ordenada segun la conditions
+ */
+
 export function orderListPokemon(data, conditions) {
   if (conditions === "A-Z") {
     data.sort((x, y) => x.name.localeCompare(y.name));
@@ -88,9 +113,28 @@ export function orderListPokemon(data, conditions) {
   return data;
 }
 
-export function filterPokemon(data, conditions) {}
+/**
+ * funcion que filtra la data segun o que escriba el usuario.(nombre)
+ * @param {array} data es una arreglo de objetos de tod los datos que de muestra en el card frontal y reverso
+ * @param {string} conditions esto es el valor del input(nombre del pokemon) de busqueda
+ * @returns {array} data filtrada
+ */
 
-// funcion para  mostrar su nivel de su debilidades:
+export function filterPokemon(data, conditions) {
+  const arrayFilterPokemon = data.filter((e) => {
+    let nameCapitaLetters = e.name.toLowerCase();
+    return nameCapitaLetters.includes(conditions.toLowerCase());
+  });
+
+  return arrayFilterPokemon;
+}
+
+/**
+ * funcion para  mostrar su stats:
+ * @param {array}data es un arreglo de objetos de los 251 pokkemones
+ * @returns {array}computeStatus es un arreglo  que contiene sus  stats de cada pokémon en porcentajes  respecto al total y mayor de ellos ,segun sea los items de las  stats
+ */
+
 export function computeStatus(data) {
   const computeStatus = [],
     arrayStatus = [],

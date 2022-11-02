@@ -1,4 +1,9 @@
-import { showList, computeStatus, orderListPokemon } from "../src/data.js";
+import {
+  showList,
+  computeStatus,
+  orderListPokemon,
+  filterPokemon,
+} from "../src/data.js";
 
 //test la funcion que muestra la lista
 describe("showList test", () => {
@@ -1274,4 +1279,47 @@ describe("orderListPokemon test", () => {
       },
     ]);
   });
+});
+
+describe("filterPokemon  test", () => {
+  const dataEjemplo = [
+    { num: "001", name: "bulbasaur" },
+    { num: "206", name: "dunsparce" },
+    { num: "231", name: "phanpy" },
+    { num: "101", name: "electrode" },
+    { num: "160", name: "feraligatr" },
+    { num: "144", name: "articuno" },
+    { num: "145", name: "zapdos" },
+    { num: "157", name: "typhlosion" },
+  ];
+
+  it("is a function", () => {
+    expect(typeof filterPokemon).toBe("function");
+  });
+
+  it("Input that is word or letters", () => {
+    expect(filterPokemon(dataEjemplo, "a")).toStrictEqual([
+      { num: "001", name: "bulbasaur" },
+      { num: "206", name: "dunsparce" },
+      { num: "231", name: "phanpy" },
+      { num: "160", name: "feraligatr" },
+      { num: "144", name: "articuno" },
+      { num: "145", name: "zapdos" },
+    ]);
+  });
+  it("Input that is word or letters Capital Letter", () => {
+    expect(filterPokemon(dataEjemplo, "P")).toStrictEqual([
+      { num: "206", name: "dunsparce" },
+      { num: "231", name: "phanpy" },
+      { num: "145", name: "zapdos" },
+      { num: "157", name: "typhlosion" },
+    ]);
+  });
+
+  /*it("input is a number", () => {
+    expect(filterPokemon(dataEjemplo, "2")).toStrictEqual([
+      { num: "206", name: "dunsparce" },
+      { num: "231", name: "phanpy" },
+    ]);
+  });*/
 });
