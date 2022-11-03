@@ -500,20 +500,71 @@ h4 {
 .weaknesses li {
   list-style: none;
   border-radius: 0.25rem;
-  padding: 0.3rem;
-  background-color: var(--color-btn);
-  color: VAR(--letras-color);
+  padding: 0.1rem;
+  color: var(--letras-color);
   font-size: 0.65rem;
   text-transform: uppercase;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+  width: 3.3rem;
+  height: 1rem;
+  text-align: center;
 }
 
-.weaknesses li {
-  background-color: var(--color-amarillo);
-  color: #000;
+.water {
+  background-color: var(--color-tipo-water);
 }
+.electric {
+  background-color: var(--color-tipo-electric);
+}
+.grass {
+  background-color: var(--color-tipo-grass);
+}
+.fighting {
+  background-color: var(--color-tipo-fighting);
+}
+.fairy {
+  background-color: var(--color-tipo-fairy);
+}
+.poison {
+  background-color: var(--color-tipo-poison);
+}
+.fire {
+  background-color: var(--color-tipo-fire);
+}
+.ice {
+  background-color: var(--color-tipo-ice);
+}
+.flying {
+  background-color: var(--color-tipo-flying);
+}
+.psychic {
+  background-color: var(--color-tipo-psychic);
+}
+.bug {
+  background-color: var(--color-tipo-bug);
+}
+.steel {
+  background-color: var(--color-tipo-steel);
+}
+.rock {
+  background-color: var(--color-tipo-rock);
+}
+.normal {
+  background-color: var(--color-tipo-normal);
+}
+.ground {
+  background-color: var(--color-tipo-ground);
+}
+.ghost {
+  background-color: var(--color-tipo-ghost);
+}
+.dark {
+  background-color: var(--color-tipo-dark);
+}
+.dragon {
+  background-color: var(--color-tipo-dragon);
+}
+
 /****************************************/
 
 .card figcaption {
@@ -563,6 +614,64 @@ h3 {
   font-weight: bold;
   text-shadow: black 0.1em 0.1em 0.2em;
 }
+
+/*********************************************/
+
+.colorWATER {
+  color: var(--color-tipo-water);
+}
+.colorELECTRIC {
+  color: var(--color-tipo-electric);
+}
+.colorGRASS {
+  color: var(--color-tipo-grass);
+}
+.colorFIGHTING {
+  color: var(--color-tipo-fighting);
+}
+.colorFAIRY {
+  color: var(--color-tipo-fairy);
+}
+.colorPOISON {
+  color: var(--color-tipo-poison);
+}
+.colorFIRE {
+  color: var(--color-tipo-fire);
+}
+.colorICE {
+  color: var(--color-tipo-ice);
+}
+.colorFLYING {
+  color: var(--color-tipo-flying);
+}
+.colorPSYCHIC {
+  color: var(--color-tipo-psychic);
+}
+.colorBUG {
+  color: var(--color-tipo-bug);
+}
+.colorSTEEL {
+  color: var(--color-tipo-steel);
+}
+.colorROCK {
+  color: var(--color-tipo-rock);
+}
+.colorNORMAL {
+  color: var(--color-tipo-normal);
+}
+.colorGROUND {
+  color: var(--color-tipo-ground);
+}
+.colorGHOST {
+  color: var(--color-tipo-ghost);
+}
+.colorDARK {
+  color: var(--color-tipo-dark);
+}
+.colorDRAGON {
+  color: var(--color-tipo-dragon);
+}
+/*****************************************/
 
 .footer {
   background: linear-gradient(to left, var(--verde-oscuro), var(--verde-claro));
