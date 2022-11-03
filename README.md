@@ -9,8 +9,8 @@ A website that shows the data of the pokemon in the form of a card, as well as s
 We defined three main goals for the layout and UX features throughout the page:
 
 - **Beginner trainer**, who wants to know about name, number and type of pokemons to get familiar with all pokemons.
-- **Intermediate trainer**, interested in filtering tools to sort pokemon by types, weaknesses and consider that information for your best pokemon during a battle.
-- **master trainer**, requesting a filter tool that can sort pokemon by the level of their attacks, giving you information to choose a character with better possibilities for an aggressive initial battle.
+- **Intermediate trainer**,interested in filtering by names, ordering alphabetically and numerically, see their size, weight, resistance, weaknesses, so consider that information for your best to choose the best pokemon
+- **master trainer**, They request a statistical tool in order to see the level of their attacks, defense, stamina, cp and hp with respect to the total of the pokemons. With this information to choose a pokemon with better chances for an aggression battle.
 
 ---
 
