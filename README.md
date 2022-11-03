@@ -4,6 +4,8 @@
 
 A website that shows the data of the pokemon in the form of a card, as well as specific information such as name, number, type, weight, height, weaknesses and their attack levels
 
+---
+
 ## Targets and User Experience
 
 We defined three main goals for the layout and UX features throughout the page:
@@ -16,11 +18,27 @@ We defined three main goals for the layout and UX features throughout the page:
 
 ## Prototype
 
+- De baja fidelidad
+
+![prototipo de baja fidelidad](prototipo.PNG)
+
 ---
+
+- De alta fidelidad version desktop
+
+  ![prototipo de desktop fidelidad](Desktop.png)
+
+---
+
+- De alta fidelidad version mobile
+
+  ![prototipo de ata mobile fidelidad](mobile.png)
+
+  ***
 
 ## Final Version
 
-<a href="#" target="_blank">Link to deployment on GitHub Pages</a>
+<a href="https://meli2.github.io/DEV001-data-lovers/" target="_blank">Link to deployment on GitHub Pages</a>
 
 ### Melania palomino
 
