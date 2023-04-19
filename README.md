@@ -38,7 +38,7 @@ We defined three main goals for the layout and UX features throughout the page:
 
 ## Final Version
 
-<a href="https://meli2.github.io/DEV001-data-lovers/" target="_blank">Link to deployment on GitHub Pages</a>
+<a href="https://aniapalominoq.github.io/DEV001-data-lovers/" target="_blank">Link to deployment on GitHub Pages</a>
 
 ### Melania palomino
 
